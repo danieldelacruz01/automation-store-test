@@ -15,7 +15,7 @@ This project performs automated UI tests against the [Automation Practice](http:
  	```
     $(npm bin)/cypress run
     ```
-The execution results will be printed in the console output. Video and screenshots are stored in cypress/videos and cypress/screenshots respectively.
+5. The execution results will be printed in the console output. Video and screenshots are stored in cypress/videos and cypress/screenshots respectively.
 
 
 **Note**: the tests run in Headless mode by default. This can be overridden via command line argument:

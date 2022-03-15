@@ -16,7 +16,6 @@ function getCheapestItem() {
 		.select	('Price: Lowest first')
 	return cy.get('.product-container')
 		.first()
-		.find('a[title="View"]')
 }
 
 function addProductToCart(quantity, size, colour) {
@@ -42,7 +41,9 @@ describe('Search and add items to Cart', function() {
 	it('should total $34.80 when 2 dresses are added to Cart', function() {
 		searchForItem('Printed Summer Dress')
 
-		getCheapestItem().click()
+		getCheapestItem()
+			.find('a[title="View"]')
+			.click()
 
 		addProductToCart(2, 'M', 'Green')
 
